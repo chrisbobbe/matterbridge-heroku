@@ -22,7 +22,7 @@
       "description": "Username of the Zulip bot.",
       "value": ""
     },
-    "MATTERBRIDGE_SLACK_CHRIS_TEST_SLACK_TOKEN": {
+    "MATTERBRIDGE_SLACK_G0V_TOKEN": {
       "description": "'Bot User OAuth Token' of the Slack bot.",
       "value": ""
     }

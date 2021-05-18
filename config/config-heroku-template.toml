@@ -14,8 +14,8 @@
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
 [slack]
-    [slack.chris-test-slack]
-        # Token="" # Set with env var MATTERBRIDGE_SLACK_CHRIS_TEST_SLACK_TOKEN
+    [slack.g0v]
+        # Token="" # Set with env var MATTERBRIDGE_SLACK_G0V_TOKEN
         RemoteNickFormat="{PROTOCOL} - @{NICK}"
 
 ## GATEWAYS
@@ -29,7 +29,7 @@
 	    channel="general/topic:slack-bridge"
 
 	[[gateway.inout]]
-	    account="slack.chris-test-slack"
+	    account="slack.g0v"
 	    channel="general"
 
 [[gateway]]
@@ -41,7 +41,7 @@
 	    channel="covid19/topic:slack-bridge"
 
 	[[gateway.inout]]
-	    account="slack.chris-test-slack"
+	    account="slack.g0v"
 	    channel="covid19"
 
 [[gateway]]
@@ -53,7 +53,7 @@
 	    channel="vaccine/topic:slack-bridge"
 
 	[[gateway.inout]]
-	    account="slack.chris-test-slack"
+	    account="slack.g0v"
 	    channel="vaccine"
 
 [[gateway]]
@@ -65,5 +65,5 @@
 	    channel="rand0m/topic:slack-bridge"
 
 	[[gateway.inout]]
-	    account="slack.chris-test-slack"
+	    account="slack.g0v"
 	    channel="rand0m"
