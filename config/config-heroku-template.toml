@@ -43,3 +43,27 @@
 	[[gateway.inout]]
 	    account="slack.chris-test-slack"
 	    channel="covid19"
+
+[[gateway]]
+    name="vaccine-gateway"
+    enable=true
+
+	[[gateway.inout]]
+	    account="zulip.g0v"
+	    channel="vaccine/topic:slack-bridge"
+
+	[[gateway.inout]]
+	    account="slack.chris-test-slack"
+	    channel="vaccine"
+
+[[gateway]]
+    name="rand0m-gateway"
+    enable=true
+
+	[[gateway.inout]]
+	    account="zulip.g0v"
+	    channel="rand0m/topic:slack-bridge"
+
+	[[gateway.inout]]
+	    account="slack.chris-test-slack"
+	    channel="rand0m"
