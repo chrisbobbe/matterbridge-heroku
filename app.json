@@ -19,7 +19,7 @@
       "value": ""
     },
     "MATTERBRIDGE_ZULIP_G0V_LOGIN": {
-      "description": "Username of the Zulip bot.",
+      "description": "Email of the Zulip bot.",
       "value": ""
     },
     "MATTERBRIDGE_SLACK_G0V_TOKEN": {
