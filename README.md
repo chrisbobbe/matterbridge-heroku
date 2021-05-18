@@ -1,3 +1,12 @@
+This is a fork of [the original
+`matterbridge-heroku`](https://github.com/cadecairos/matterbridge-heroku).
+
+It includes [a custom config file][config] specific to one
+implementation, but this can easily be modified in a new fork.
+
+Currently, it is set up to bridge between a test Slack instance and
+g0v.zulipchat.com. Secrets are handled in Heroku.
+
 # Matterbridge-Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)

@@ -1,37 +1,45 @@
-[IRC]
+[zulip.g0v]
+    #Log in to the Zulip server.
+    #Navigate to Settings () -> Your bots -> Add a new bot.
+    #Select Generic for bot type, fill out the form and click on Create bot.
+    #Token is the API key, you've got when creating the bot
+    # Token="" # Set with env var MATTERBRIDGE_ZULIP_G0V_TOKEN
 
-Enable=true
-Server="${IRC_SERVER}"
-Nick="${IRC_NICK}"
-UseTLS=${IRC_USE_TLS}
-UseSASL=${IRC_USE_SASL}
-SkipTLSVerify=${IRC_SKIP_TLS_VERIFY}
-NickServNick="${IRC_NICKSERV_NICK}"
-NickServPassword="${IRC_NICKSERV_PASSWORD}"
-RemoteNickFormat="${IRC_REMOTE_NICK_FORMAT}"
-IgnoreNicks="${IRC_IGNORE_NICKS}"
+    #Login is the Username of the bot you've got when creating the bot
+    # Login="" # Set with env var MATTERBRIDGE_ZULIP_G0V_LOGIN
 
-[mattermost]
+    #The URL of your zulip server
+    Server="https://g0v.zulipchat.com"
 
-Enable=true
-Server="${MATTERMOST_SERVER}"
-Team="${MATTERMOST_TEAM}"
-Login="${MATTERMOST_BOT_LOGIN}"
-Password="$MATTERMOST_BOT_PASSWORD}"
-NoTLS=${MATTERMOST_NO_TLS}
-SkipTLSVerify=${MATTERMOST_SKIP_TLS_VERIFY}
-ShowJoinPart=${MATTERMOST_SHOW_JOIN_PART}
-PrefixMessagesWithNick=${MATTERMOST_PREFIX_MSG_WITH_NICK}
-RemoteNickFormat="${MATTERMOST_REMOTE_NICK_FORMAT}"
-NickFormatter="${MATTERMOST_NICK_FORMATTER}"
-NicksPerRow=${MATTERMOST_NICKS_PER_ROW}
-IgnoreNicks="${MATTERMOST_IGNORE_NICKS}"
+    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
-[Channel "channel-1"]
+[slack]
+    [slack.chris-test-slack]
+        # Token="" # Set with env var MATTERBRIDGE_SLACK_CHRIS_TEST_SLACK_TOKEN
+        RemoteNickFormat="{PROTOCOL} - @{NICK}"
 
-IRC="${IRC_CHANNEL}"
-mattermost="${MATTERMOST_CHANNEL}"
+## GATEWAYS
 
-[general]
+[[gateway]]
+    name="general-gateway"
+    enable=true
 
-Plus=true
+	[[gateway.inout]]
+	    account="zulip.g0v"
+	    channel="general/topic:slack-bridge"
+
+	[[gateway.inout]]
+	    account="slack.chris-test-slack"
+	    channel="general"
+
+[[gateway]]
+    name="covid19-gateway"
+    enable=true
+
+	[[gateway.inout]]
+	    account="zulip.g0v"
+	    channel="covid19/topic:slack-bridge"
+
+	[[gateway.inout]]
+	    account="slack.chris-test-slack"
+	    channel="covid19"
