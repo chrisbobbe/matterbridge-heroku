@@ -4,8 +4,8 @@ This is a fork of [the original
 It includes [a custom config file][config] specific to one
 implementation, but this can easily be modified in a new fork.
 
-Currently, it is set up to bridge between g0v-tw.slack.com and
-g0v.zulipchat.com. Secrets are handled in Heroku.
+Currently, deploying this will make a bridge between g0v-tw.slack.com
+and g0v.zulipchat.com. Secrets are handled in Heroku.
 
 # Setup instructions for this fork
 
