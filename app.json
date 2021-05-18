@@ -11,8 +11,8 @@
   ],
   "env": {
     "MATTERBRIDGE_VERSION": {
-       "description": "Version of matterbridge to download and deploy",
-       "value": "0.10.2"
+       "description": "Version of matterbridge to download and deploy. Omit the 'v': use 1.22.1, not v1.22.1.",
+       "value": "1.22.1"
     },
     "IRC_SERVER": {
       "description": "The IRC server (including port) to connect to",
