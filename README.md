@@ -24,7 +24,8 @@ and g0v.zulipchat.com. Secrets are handled in Heroku.
 4. Deploy to Heroku.
    1. Click the "Deploy to Heroku" button below.
    2. Choose an app name.
-   3. Fill in the secrets you obtained above.
+   3. Fill out the form that asks you for the secrets you obtained
+      above. They will be stored in environment variables.
    4. When the Heroku instance is set up, go to the "Resources" tab
       and switch on the worker called `./start.sh`. You'll need to
       click the edit icon on the item before the switch will respond.
