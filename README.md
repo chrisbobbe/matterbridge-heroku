@@ -9,10 +9,10 @@ and g0v.zulipchat.com. Secrets are handled in Heroku.
 
 # Setup instructions for this fork
 
-1. Check that the right bridges are configured in
-   `config/config-heroku-template.toml`. See [this
+1. Check that the right bridges are configured in the [config
+   file](./config/config-heroku-template.toml). See [this
    doc](https://github.com/42wim/matterbridge#configuration) for what
-   goes in that file.
+   you can set in that file.
 2. Set up a Slack App (Classic) and bot, get the "Bot User OAuth
    Token", and subscribe the bot to the relevant channels, using
    [these
